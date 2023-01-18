@@ -1,6 +1,6 @@
 // Tutorial: https://youtu.be/abRY4lbgaF4
 require('dotenv').config()
-
+const express = require('express')
 const Discord = require("discord.js")
 const { Client, Intents } = require('discord.js');
 
@@ -23,3 +23,14 @@ client.on("message", msg => {
 
 // Add bot token in the "quotes" below
 client.login(process.env.DISCORD_TOKEN)
+
+const app = express()
+const port = process.env.PORT ?? 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
