@@ -1,6 +1,6 @@
 // Tutorial: https://youtu.be/abRY4lbgaF4
-import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
-dotenv.config()
+require('dotenv').config()
+
 const Discord = require("discord.js")
 const { Client, Intents } = require('discord.js');
 
