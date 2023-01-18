@@ -13,12 +13,9 @@ client.on("ready", () => {
 })
 
 // when someone types a message
-client.on("message", msg => {
+client.on("messageCreate", msg => {
   // check if the message is ping
-  if (msg.content === "ping") {
-    // if the message is ping, reply with pong
-    msg.reply("pong");
-  }
+  msg.reply("pong");
 })
 
 // Add bot token in the "quotes" below
